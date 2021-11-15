@@ -1,0 +1,37 @@
+#app:
+    #resource: '@AppBundle/Controller/'
+    #type: annotation
+
+forecast_simple:
+    path: "/forecast/index"
+    defaults: {_controller: AppBundle:Forecast:index}
+
+forecast_param:
+    path: "/forecast/{weather}"
+    defaults: {_controller: AppBundle:Forecast:indexParam}
+
+forecast_2_param:
+    path: "/forecast/{weather}/{temperature}"
+    defaults: {_controller: AppBundle:Forecast:index2Params, weather: cloudy, temperature: 15}
+
+forecast_request_param:
+    path: "/forecast/indexRequest/{weather}/{temperature}"
+    defaults: {_controller: AppBundle:Forecast:indexRequest, weather: cloudy, temperature: 15}
+
+redirect_index:
+    path: "/redirect/index"
+    defaults: {_controller: AppBundle:Redirect:index}
+
+redirect_internal:
+    path: "/internalredirect"
+    defaults: {_controller: AppBundle:Redirect:internalRedirect}
+
+redirect_internal_permanent:
+    path: "/internalpermredirect"
+    defaults: {_controller: AppBundle:Redirect:internalRedirectPermanent}
+
+redirect_external:
+    path: "/externalredirect"
+    defaults: {_controller: AppBundle:Redirect:extenalRedirect}
+
+
