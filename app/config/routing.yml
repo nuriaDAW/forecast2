@@ -34,4 +34,22 @@ redirect_external:
     path: "/externalredirect"
     defaults: {_controller: AppBundle:Redirect:extenalRedirect}
 
+get_temp:
+    path: "/temperature/{id}"
+    defaults: {_controller: AppBundle:Temperature:get}
+    requirements: 
+        id: \d+
+
+check_temp:
+    path: "/temperature/check"
+    defaults: {_controller: AppBundle:Temperature:check}
+
+get_all_temp:
+    path: "temperature/getall"
+    defaults: {_controller: AppBundle:Temperature:getAll}
+
+location_index:
+    path: "location/index"
+    defaults: {_controller: AppBundle:Location:index}
+
 
