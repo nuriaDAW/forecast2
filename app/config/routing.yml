@@ -52,4 +52,19 @@ location_index:
     path: "location/index"
     defaults: {_controller: AppBundle:Location:index}
 
+location_json:
+    path: "location/json"
+    defaults: {_controller: AppBundle:Location:indexJson}
+
+standalone:
+    path: "/standalone"
+    defaults: 
+        _controller: FrameworkBundle:Template:template
+        template: standalone/index.html.twig
+        maxAge: 86400
+        shareAge: 86400
+
+forward:
+    path: "/forward"
+    defaults: {_controller: AppBundle:Forward:index}
 
